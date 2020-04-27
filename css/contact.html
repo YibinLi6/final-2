@@ -1,0 +1,51 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+
+<body style="background-color:#3498DB;">
+<h1 style="margin-left: auto; margin-right: auto;margin-bottom: 100px;text-align: center; color: white;">Rock Paper Scissors</h1>
+ <img src="1.jpg" style="margin-left:0%;"alt="">
+<input type="radio" value="1" name="b1" style="width:100px; height:80px;" >
+ <img src="2.jpg" alt="">
+<input type="radio" value="2" name="b1" style="width:100px; height:80px;">
+ <img src="3.jpg" alt="">
+<input type="radio" value="3" name="b1" style="width:100px; height:80px;;">
+
+<input style="margin-top: 200px;font-size:30px;width:200px; height:80px; display:block;margin:0 auto;"type="button" value="yes" onclick="check();">
+</body>
+
+<script type="text/javascript">
+function check() {
+
+var computer = Math.floor((Math.random() * 3) + 1);
+
+var value;
+var radios = document.getElementsByName('b1');
+for(var i = 0; i < radios.length; i++) {
+if(radios[i].checked) {
+value = radios[i].value;
+}
+}
+
+if(value == 1 && computer == 2) {
+window.location.href="contact2.html";
+}
+else if(value == 2 && computer == 3) {
+window.location.href="contact2.html";
+}
+else if(value == 3 && computer == 1) {
+window.location.href="contact2.html";
+}
+else if(value == computer) {
+window.location.href="contact3.html";
+}
+else {
+window.location.href="contact4.html";
+}
+}
+</script>
+ </html>
